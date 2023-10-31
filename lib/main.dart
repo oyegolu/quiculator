@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:quiculator/screens/home_screen.dart';
 
 void main() {
   runApp(const Quiculator());
+
 }
 
 class Quiculator extends StatelessWidget {
@@ -10,11 +12,8 @@ class Quiculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const Scaffold(
-        body: Center(
-          child: Text('hello'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
       theme: ThemeData.dark(),
     );
   }
