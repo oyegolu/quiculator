@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quiculator/constants/colors.dart';
 import 'package:quiculator/screens/widgets_data.dart';
 import '../widgets/TextFeild.dart';
+import '../widgets/cal_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -22,7 +23,7 @@ class HomeScreen extends StatelessWidget {
       body: Column(
         children: [
           const CstmTextFeild(),
-          Spacer(),
+          const Spacer(),
           Container(
               height: screenHeight * 0.6,
               width: double.infinity,
@@ -39,19 +40,16 @@ class HomeScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: List.generate(4, (index) => buttonList[index]),
                     ),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children:
                           List.generate(4, (index) => buttonList[index + 4]),
                     ),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children:
                           List.generate(4, (index) => buttonList[index + 8]),
                     ),
-
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -59,7 +57,8 @@ class HomeScreen extends StatelessWidget {
                           child: Column(
                             children: [
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: List.generate(
                                     3, (index) => buttonList[index + 12]),
                               ),
@@ -67,7 +66,8 @@ class HomeScreen extends StatelessWidget {
                                 height: screenHeight * 0.04,
                               ),
                               Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: List.generate(
                                     3, (index) => buttonList[index + 15]),
                               )
@@ -75,18 +75,7 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: screenWidth * 0.08),
-                        Container(
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                              color: appColors.secondaryColor),
-                          width: 60,
-                          height: 140,
-                          child: const Center(
-                              child: Text(
-                            '=',
-                            style: TextStyle(fontSize: 30.0),
-                          )),
-                        )
+                        const Button2()
                       ],
                     ),
                   ],
@@ -97,3 +86,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

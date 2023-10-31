@@ -10,19 +10,24 @@ class Button1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      elevation: 3.0,
-      borderRadius: BorderRadius.circular(30.0),
-      child:  CircleAvatar(
-        backgroundColor: appColors.secondary2Color,
-        radius: 30.0,
-        child: Text(
-          buttonText,
-          style:  TextStyle(
-              fontSize: 30.0,
-              color: buttonColor,
-              fontWeight: FontWeight.w500),
-        ),
-      ),);
+    return InkWell(
+      onTap: () {
+        //TODO: give the tap option for button 1
+      },
+      child: Material(
+        elevation: 3.0,
+        borderRadius: BorderRadius.circular(30.0),
+        child:  CircleAvatar(
+          backgroundColor: appColors.secondary2Color,
+          radius: 30.0,
+          child: Text(
+            buttonText,
+            style:  TextStyle(
+                fontSize: 30.0,
+                color: buttonColor,
+                fontWeight: FontWeight.w500),
+          ),
+        ),),
+    );
   }
 }
