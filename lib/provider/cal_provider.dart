@@ -9,10 +9,10 @@ class CalculatorProvider extends ChangeNotifier {
   setValue(String val){
     String inputText = computationController.text;
     switch (val){
-      case 'C':
+      case 'AC':
         computationController.clear();
         break;
-      case 'AC':
+      case 'C':
         computationController.text = inputText.substring(0,inputText.length-1);
         break;
       case 'X':
