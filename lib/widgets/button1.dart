@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:quiculator/constants/colors.dart';
+import 'package:quiculator/provider/cal_provider.dart';
 
 class Button1 extends StatelessWidget {
   final String buttonText;
@@ -10,24 +12,20 @@ class Button1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        //TODO: give the tap option for button 1
-      },
-      child: Material(
+    return ElevatedButton(
+      onPressed: () => Provider.of<CalculatorProvider>(context, listen: false)
+          .setValue(buttonText),
+      style: ElevatedButton.styleFrom(
+        shape: const CircleBorder(),
+        padding: const EdgeInsets.all(24),
+        backgroundColor: appColors.secondary2Color,
         elevation: 3.0,
-        borderRadius: BorderRadius.circular(30.0),
-        child:  CircleAvatar(
-          backgroundColor: appColors.secondary2Color,
-          radius: 30.0,
-          child: Text(
-            buttonText,
-            style:  TextStyle(
-                fontSize: 30.0,
-                color: buttonColor,
-                fontWeight: FontWeight.w500),
-          ),
-        ),),
+      ),
+      child: Text(
+        buttonText,
+        style: TextStyle(
+            fontSize: 26.0, color: buttonColor, fontWeight: FontWeight.w500),
+      ),
     );
   }
 }

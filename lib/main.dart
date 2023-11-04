@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:quiculator/provider/cal_provider.dart';
 import 'package:quiculator/screens/home_screen.dart';
 
 void main() {
@@ -11,10 +13,13 @@ class Quiculator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
-      theme: ThemeData.dark(),
+    return ChangeNotifierProvider(
+      create: (context) => CalculatorProvider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: const HomeScreen(),
+        theme: ThemeData.dark(),
+      ),
     );
   }
 }

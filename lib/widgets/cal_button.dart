@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import'package:quiculator/constants/colors.dart';
+import 'package:quiculator/provider/cal_provider.dart';
 
 class Button2 extends StatelessWidget {
   const Button2({
@@ -10,7 +12,9 @@ class Button2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        //todo: make the tap option for cal button
+        // rem we use listen fals for the setter and the functions
+        // true for getters (getting the value)
+        Provider.of<CalculatorProvider>(context,listen: false).setValue('=');
       },
       child: Container(
         decoration: BoxDecoration(
