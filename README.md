@@ -1,16 +1,14 @@
 # quiculator
 
-A new Flutter project.
+A calculator app build using flutter 
+and state management used - provider
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+their are couple of things that could be better like 
+^ if the text exceeds the field it is not visible
+^ the ui is ok for devices around 5 to 7 inch after that the ui gets messed means its not flexible for any screen size
+^ each time u calulate even the ans is it int it comes with .0  (that is curable right now but i am bit bored with that project i will do it later)
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+else - everthing works fine
